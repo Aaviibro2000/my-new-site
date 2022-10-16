@@ -1,5 +1,10 @@
 from django.http import HttpResponse
 
+
 def index(request):
-    return HttpResponse("hello world")
+    d = {
+        "name":"arun",
+        "age":30,
+    }
+    return HttpResponse("<b>hello world</b>")
 
