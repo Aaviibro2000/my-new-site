@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 
 
 def index(request):
@@ -6,5 +7,7 @@ def index(request):
         "name":"arun",
         "age":30,
     }
-    return HttpResponse("<b>hello world</b>")
+    
+    return render(request,'index.html')
 
+ 
