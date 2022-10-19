@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Products</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+    {% for p in products %}
+    <ol>
+        <li>{{p.name}}</li>
+        <li>{{p.price}}</li>
+        <li>{{p.description}}</li>
+    </ol>
+    {% endfor %} </body>
+
+</html>
