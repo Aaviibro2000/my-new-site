@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Products</title>
-    <meta name="description" content="">
+    <title></title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
+    <link href="css/style.css" rel="stylesheet">
     <style>
         .card {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -38,29 +36,18 @@
             opacity: 0.7;
         }
     </style>
-
 </head>
 
 <body>
+    <div class="card">
+        <img src="https://cdn.shopify.com/s/files/1/0507/2761/6695/products/Blue_1839fb66-1f82-4667-ace2-77cd240821d7_720x.jpg?v=1635501435" alt="Denim Jeans" style="width:100%">
+        <h1>{{p.name}}</h1>
+        <p class="price">₹ {{p.price}}</p>
+        <p>{{p.description}}</p>
+        <br>
+        <br>
+    </div>
 
-    {% for p in products %}
-    <ol>
-        <h2 style="text-align:center">Product Card</h2>
-
-
-        <a href="http://127.0.0.1:8000/myapp/products/{{p.id}}">
-
-            <div class="card">
-                <img src="https://cdn.shopify.com/s/files/1/0507/2761/6695/products/Blue_1839fb66-1f82-4667-ace2-77cd240821d7_720x.jpg?v=1635501435" alt="Denim Jeans" style="width:100%">
-                <h1>{{p.name}}</h1>
-                <p class="price">₹ {{p.price}}</p>
-                <p>{{p.description}}</p>
-                <br>
-                <br>
-            </div>
-        </a>
-    </ol>
-    {% endfor %}
 </body>
 
 </html>

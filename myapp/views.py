@@ -25,3 +25,23 @@ def products(request):
     p = product.objects.all()
     context={'products':p}
     return render(request,'myapp/products.html',context=context)
+
+def products_details(request,id):
+    p = product.objects.get(id=id)
+    context={'p':p}
+    return render(request,'myapp/products_details.html',context=context)
+
+def add_product(request):
+    p = product()
+    p.name="Samsung 32 inch HD TV"
+    p.price=40000.00
+    p.description="This is a TV"
+    p.save()
+    return HttpResponse(p)
+    
+    
+    
+    
+    
+    
+    
