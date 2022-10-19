@@ -8,16 +8,54 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="">
+    <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+        }
+        
+        .price {
+            color: grey;
+            font-size: 22px;
+        }
+        
+        .card button {
+            border: none;
+            outline: 0;
+            padding: 12px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+        
+        .card button:hover {
+            opacity: 0.7;
+        }
+    </style>
+
 </head>
 
 <body>
 
     {% for p in products %}
     <ol>
-        <li>{{p.name}}</li>
-        <li>{{p.price}}</li>
-        <li>{{p.description}}</li>
+        <h2 style="text-align:center">Product Card</h2>
+
+        <div class="card">
+            <img src="https://cdn.shopify.com/s/files/1/0507/2761/6695/products/Blue_1839fb66-1f82-4667-ace2-77cd240821d7_720x.jpg?v=1635501435" alt="Denim Jeans" style="width:100%">
+            <h1>{{p.name}}</h1>
+            <p class="price">₹ {{p.price}}</p>
+            <p>{{p.description}}</p>
+            <br>
+            <br>
     </ol>
-    {% endfor %} </body>
+    {% endfor %}
+</body>
 
 </html>
