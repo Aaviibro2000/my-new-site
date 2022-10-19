@@ -1,3 +1,6 @@
+from distutils.command.upload import upload
+from tkinter import image_types
+
 from django.db import models
 
 
@@ -7,3 +10,4 @@ class product(models.Model):
      name = models.CharField(max_length=100,unique=True)
      price = models.FloatField()
      description = models.CharField(max_length=200)
+     image= models.ImageField(blank=True,upload_to='images')
