@@ -1,14 +1,16 @@
 
 {% load tailwind_tags %}
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="light">
 
 <head>
-    <title></title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
-    <style>
+    <meta charset=" utf-8 ">
+    <meta http-equiv="X-UA-Compatible " content="IE=edge ">
+    <title>Products</title>
+    <meta name="description " content=" ">
+    <meta name="viewport " content="width=device-width, initial-scale=1 ">
+    <link rel="stylesheet " href=" "> {% tailwind_css %}
+    {% comment %} <style>
         .card {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             max-width: 300px;
@@ -37,17 +39,34 @@
         .card button:hover {
             opacity: 0.7;
         }
-    </style>
+    </style> {% endcomment %}
 </head>
 
 <body>
-    <div class="card ">
+    {% comment %} <div class="card w-96 bg-base-96  p-4 border-4 shadow-xl rounded-lg">
         <img class="object-contain h-48 w-96" src="{{p.image.url}}" alt="image is loading" style="width:100%">
         <h1>{{p.name}}</h1>
         <p class="price">₹ {{p.price}}</p>
         <p>{{p.description}}</p>
         <br>
         <br>
+    </div> {% endcomment %}
+    
+    <div class="card w-96 bg-base-96  p-4 border-4 shadow-xl rounded-lg">
+        <a href="{% url 'products_details' p.id %} ">
+            <figure class="px-10 pt-10">
+                <img class="object-contain h-48 w-96 " src="{{p.image.url}}" alt="image is loading" style="width:100%" />
+            </figure>
+            <div class="card-body items-center text-center">
+                <h1 class="card-title" style=" text-align:center">
+                    <b>{{p.name}}</b></h1>
+                <p>{{p.description}}</p>
+                <div class="card-actions  ">
+                    <button class="btn btn-primary ">₹{{p.price}}</button>
+                    <button class="btn btn-warning ">add to cart</button>
+                </div>
+            </div>
+        </a>
     </div>
 
 </body>

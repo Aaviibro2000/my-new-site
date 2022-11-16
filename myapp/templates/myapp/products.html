@@ -43,10 +43,12 @@
 </head>
 
 <body>
+
     <div class="navbar bg-base-100 drop-shadow-md ">
         <div class="flex-1 navbar navbar bg-primary text-primary-content rounded-lg">
             <a class="btn btn-ghost normal-case text-xl ">
                 <b>CAM CARE</b></a>
+
         </div>
         <div class="flex-none">
             <div class="dropdown dropdown-end">
@@ -85,7 +87,8 @@
             </div>
         </div>
     </div>
-    <div class="flex flex-wrap overflow-auto ">
+
+    <div class="flex flex-wrap md:flex-wrap-reverse  justify-center  overflow-auto  ">
         {% for p in products %}
 
         <div class="card w-96 bg-base-96  p-4 border-4 shadow-xl rounded-lg">
