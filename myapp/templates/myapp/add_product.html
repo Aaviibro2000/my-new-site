@@ -1,0 +1,26 @@
+{% extends 'myapp/base.html' %}
+{% block content %}
+<h1 class="text-2xl font-bold m-10 text-green-500 " >➕ ADD Product</h1>
+    <form action="" method="POST" enctype="multipart/form-data" class='card-body w-2/6 shadow-xl m-10 p-10 '>
+        {% csrf_token %}
+        <div class="mb-5 ">
+            <label class="block text-grey-700 text-sm font-bold mb-2">Product Name</label>
+            <input class="input input-bordered w-full max-w-xs" type="text" name="name" id="name" placeholder="Name">
+        </div>
+        <div class="mb-5">
+            <label class="block text-grey-700 text-sm font-bold mb-2">Product Price</label>
+            <input class="input input-bordered w-full max-w-xs" type="text" name="price" id="price" placeholder="₹ price">
+        </div>
+        <div class="mb-5">
+            <label class="block text-grey-700 text-sm font-bold mb-2">Product Description</label>
+            <input class="input input-bordered w-full max-w-xs" type="text" name="desc" id="desc" placeholder="Description">
+        </div>
+        <div class="mb-5">
+            <label class="block text-grey-700 text-sm font-bold mb-2">Product image</label>
+            <input type="file" name="upload" id="upload">
+        </div>
+        <div >
+            <input class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 w-2/5" type="submit" accept="image/*" name="Add Product" value="Add Product">
+        </div>
+    </form>
+{% endblock %}

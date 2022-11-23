@@ -1,7 +1,7 @@
 from multiprocessing import context
 
 from django.http import HttpRequest, HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 
 from myapp.models import product
 
@@ -32,12 +32,17 @@ def products_details(request,id):
     return render(request,'myapp/products_details.html',context=context)
 
 def add_product(request):
-    p = product()
-    p.name="Samsung 32 inch HD TV"
-    p.price=40000.00
-    p.description="This is a TV"
-    p.save()
-    return HttpResponse(p)
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        price = request.POST.get('price')
+        desc = request.POST.get('desc')
+        image = request.FILES['upload']
+        p=product(name=name,price=price,description=desc,image=image)
+        p.save()
+        
+        return redirect('/myapp/products')
+        
+    return render(request,'myapp/add_product.html')
     
     
     
