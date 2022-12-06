@@ -43,6 +43,27 @@ def add_product(request):
         return redirect('/myapp/products')
         
     return render(request,'myapp/add_product.html')
+
+def update_product(request,id):
+    p = product.objects.get(id=id)
+    context = {'p':p}
+    
+    
+    if request.method == 'POST':
+        p.name = request.POST.get('name')
+        p.price = request.POST.get('price')
+        p.description = request.POST.get('desc')
+        try:
+            p.image = request.FILES['upload']
+        except:
+            pass
+        p.save()
+        
+        return redirect('/myapp/products')
+        
+    return render(request,'myapp/update_product.html',context=context)
+
+
     
     
     
