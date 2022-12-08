@@ -10,7 +10,7 @@ def register(request):
     
     form = NewUserForm(request.POST)
     context = {
-        'form' : form,
+        'f' : form,
     }
     
-    return render(request,'users/register.hmtl',context)
+    return render(request,'users/register.html ',context)
