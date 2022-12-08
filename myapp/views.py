@@ -36,6 +36,7 @@ def add_product(request):
         name = request.POST.get('name')
         price = request.POST.get('price')
         desc = request.POST.get('desc')
+        details = request.POST.get('details')
         image = request.FILES['upload']
         p=product(name=name,price=price,description=desc,image=image)
         p.save()
@@ -53,6 +54,7 @@ def update_product(request,id):
         p.name = request.POST.get('name')
         p.price = request.POST.get('price')
         p.description = request.POST.get('desc')
+        p.details = request.POST.get('details')
         try:
             p.image = request.FILES['upload']
         except:

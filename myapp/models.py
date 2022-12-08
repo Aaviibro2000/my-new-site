@@ -10,4 +10,5 @@ class product(models.Model):
      name = models.CharField(max_length=100,unique=True)
      price = models.FloatField()
      description = models.CharField(max_length=200)
+     details = models.CharField(max_length=2000,blank=True)
      image = models.ImageField(blank=True,upload_to='images')

@@ -4,11 +4,12 @@
 {% block content %}
     
 <div class="card lg:card-side  shadow-xl">
-    <figure> <img class="max-w-xs hover:scale-110 transition duration-300 ease-in-out .h-auto " src="{{p.image.url}}" alt="image is loading" /></figure>
+    <figure> <img class="max-w-xs h-100 w-96  hover:scale-110 transition duration-300 ease-in-out .h-auto " src="{{p.image.url}}" alt="image is loading" /></figure>
     <div class="card-body">
       </h1 class="card-title"style=" text-align:center">
       <b>{{p.name}}</b></h1>
       <p>{{p.description}}</p>
+      <p>{{p.details}}</p>
       <div class="card-actions justify-end">
         <button class="btn btn-primary">₹{{p.price}}</button>
         <button class="btn btn-warning ">add to cart</button>

@@ -2230,11 +2230,6 @@ html {
   }
 }
 
-.form-control {
-  display: flex;
-  flex-direction: column;
-}
-
 .label {
   display: flex;
   -webkit-user-select: none;
@@ -3566,10 +3561,6 @@ html {
   margin-top: 0.75rem;
 }
 
-.mr-1 {
-  margin-right: 0.25rem;
-}
-
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -3634,12 +3625,12 @@ html {
   width: 24rem;
 }
 
-.w-4 {
-  width: 1rem;
-}
-
 .w-36 {
   width: 9rem;
+}
+
+.w-32 {
+  width: 8rem;
 }
 
 .max-w-xs {
@@ -3696,15 +3687,6 @@ html {
 
 .rounded-full {
   border-radius: 9999px;
-}
-
-.rounded {
-  border-radius: 0.25rem;
-}
-
-.rounded-l {
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
 }
 
 .border-4 {
@@ -3852,11 +3834,6 @@ html {
 .text-red-500 {
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity));
-}
-
-.text-yellow-500 {
-  --tw-text-opacity: 1;
-  color: rgb(234 179 8 / var(--tw-text-opacity));
 }
 
 .text-yellow-400 {

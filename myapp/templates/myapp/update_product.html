@@ -16,6 +16,10 @@
             <input class="input input-bordered w-full max-w-xs" type="text" name="desc" id="desc" value="{{p.description}}" placeholder="Description">
         </div>
         <div class="mb-5">
+            <label class="block text-grey-700 text-sm font-bold mb-2">Product Details</label>
+            <input class="input input-bordered w-full max-w-xs" type="text" name="desc" id="desc" value="{{p.details}}" placeholder="details">
+        </div>
+        <div class="mb-5">
             <label class="block text-grey-700 text-sm font-bold mb-2">Product image</label>
             <img class="w-36 mb-3 rounded-lg" src="{{p.image.url}}" alt="image not found">
             <input type="file" name="upload" id="upload">
