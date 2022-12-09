@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    {% block content%}
     <section>
         <div class="navbar bg-base-100 drop-shadow-md ">
             <div class="flex-1 navbar navbar bg-primary text-primary-content rounded-lg">
@@ -58,7 +59,7 @@
     </section>
 
 
-    {% block content%} {% endblock %}
+    {% endblock %}
 
 
 

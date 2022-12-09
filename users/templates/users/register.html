@@ -1,1 +1,29 @@
-{% extends 'users/base_new.html' %} {% block content %} {% endblock content %}
+ {% extends 'myapp/base.html' %} {% block content %}
+
+
+
+<form style="position:relative; left: 470px; margin-top: 2%;" action="" method="POST" class='card-body w-2/6 shadow-2xl m-10 p-10 bg-gray-100 bg-gradient-to-tr from-fuchsia-300 to-sky-500'>
+    {% csrf_token %}
+
+    <h1 class="text-2xl font-bold text-center">👤Create An User Account</h1>
+    <div class="mb-5">
+        <label class="block text-grey-700 text-sm font-bold mb-2">Username</label> {{form.username}}
+    </div>
+    <div class="mb-5">
+        <label class="block text-grey-700 text-sm font-bold mb-2">E Mail</label> {{form.email}}
+    </div>
+    <div class="mb-5">
+        <label class="block text-grey-700 text-sm font-bold mb-2">Password</label> {{form.password1}}
+    </div>
+    <div class="mb-5">
+        <label class="block text-grey-700 text-sm font-bold mb-2">Confirm Password</label> {{form.password2}}
+    </div>
+    <div class="mt-3">
+        <button class="w-full px-6 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900" type="submit">Create Account</button>
+    </div>
+</form>
+
+
+
+
+{%endblock%}

@@ -8,9 +8,16 @@ from users.forms import NewUserForm
 
 def register(request):
     
-    form = NewUserForm(request.POST)
+    if request.method == 'POST':
+        form = NewUserForm(request.POST)
+        print(f'form valid : {form.is_valid()}')
+        
+        if form.is_valid:
+            form.save()
+        
+    form = NewUserForm(request.POST)    
     context = {
-        'f' : form,
+        'form' : form,
     }
     
     return render(request,'users/register.html ',context)
