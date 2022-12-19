@@ -51,7 +51,11 @@
                     </a>
                         </li>
                         <li><a>Settings</a></li>
-                        <li class="text-red-500"><a>Logout</a></li>
+                        {% if user.is_authenticated %}
+                        <li class="text-red-500"><a href="{% url 'users:logout' %}">Logout</a></li>
+                        {% else %}
+                        <li class="text-blue-500"> <a href="{% url 'users:login' %}">login</a></li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>
