@@ -1,8 +1,5 @@
- {% extends 'myapp/base.html' %} {% block content %}
-
-
-
-<form style="position:relative; left: 470px; margin-top: 2%;" action="" method="POST" class='card-body w-2/6 shadow-2xl m-10 p-10 bg-gray-100 bg-gradient-to-tr from-fuchsia-300 to-sky-500'>
+ {% extends 'base.html' %} {% block content %}
+<form style="position:relative; left: 470px; margin-top: 2%;" action="" method="POST" class='card w-2/6 shadow-2xl m-10 p-10 bg-gray-100 bg-gradient-to-tr from-fuchsia-300 to-sky-500'>
     {% csrf_token %}
 
     <h1 class="text-2xl font-bold text-center">👤Create An User Account</h1>
