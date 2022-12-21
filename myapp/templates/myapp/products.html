@@ -5,7 +5,7 @@
     {% for p in products %}
 
     <div class="card w-96 bg-base-96  p-4 border-4 shadow-xl rounded-lg">
-        <a href="{% url 'products_details' p.id %} ">
+        <a href="{% url 'myapp:products_details' p.id %} ">
             <figure class="px-10 pt-10">
                 <img class="object-contain h-48 w-96 max-w-xs hover:scale-110 transition duration-300 ease-in-out .h-auto " src="{{p.image.url}}" alt="image is loading" />
             </figure>

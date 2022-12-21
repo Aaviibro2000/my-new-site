@@ -2,6 +2,8 @@ from django.urls import include, path
 
 from .views import add_product, index, products, products_details,update_product,delete_product
 
+app_name='myapp'
+
 urlpatterns = [
     path('',index),
     path('products',products,name='products'),

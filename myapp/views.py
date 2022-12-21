@@ -2,7 +2,7 @@ from multiprocessing import context
 
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render,redirect
-
+from django.contrib.auth.decorators import login_required
 from myapp.models import product
 
 
@@ -21,11 +21,14 @@ def index(request):
      
     return render(request,'myapp/index.html',context=context)
 
+
+
 def products(request):
     p = product.objects.all()
     context={'products':p}
     return render(request,'myapp/products.html',context=context)
 
+@login_required
 def products_details(request,id):
     p = product.objects.get(id=id)
     context={'p':p}
