@@ -2,6 +2,7 @@ from distutils.command.upload import upload
 from tkinter import image_types
 
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class product(models.Model):
@@ -12,3 +13,4 @@ class product(models.Model):
      description = models.CharField(max_length=200)
      details = models.CharField(max_length=2000,blank=True)
      image = models.ImageField(blank=True,upload_to='images')
+     seller = models.ForeignKey(User,on_delete=models.CASCADE)

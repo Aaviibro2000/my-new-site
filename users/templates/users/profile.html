@@ -1,1 +1,10 @@
-{{user}}
+{% extends 'myapp/base.html' %} {% block contents %}
+
+<div class="card card-side bg-base=-100 shadow-xl">
+    <figure><img src="{{profile.image.url}}" alt="loading"></figure>
+    <div class="card-body">
+        <h2 class="card-title">{{user.username}}</h2>
+    </div>
+</div>
+
+{% endblock %}

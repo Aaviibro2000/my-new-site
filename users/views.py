@@ -24,7 +24,10 @@ def register(request):
 
 
 def profile(request):
-    return render(request,'users/profile.html')
+    pro = Profile.objects.get(user=request.user)
+    
+    context = {'profile': pro}
+    return render(request,'users/profile.html',context=context)
 
 
 def create_profile(request):
