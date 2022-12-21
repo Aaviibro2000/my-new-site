@@ -8,7 +8,11 @@
         <b>{{p.name}}</b></h1>
         <p>{{p.description}}</p>
         <p>{{p.details}}</p>
-        <p>{{p.seller}}</p>
+        <div class="text-green-600">Sold By : {{p.seller}} </div>
+        <a href="{% url 'users:sellerprofile' p.seller.id %}">
+            <div class="text-sm">seller details</div>
+        </a>
+
         <div class="card-actions justify-end">
             <span class="text-3xl font-bold text-black ">₹{{p.price}}</span>
             <button class="btn btn-primary ">BUY</button>
